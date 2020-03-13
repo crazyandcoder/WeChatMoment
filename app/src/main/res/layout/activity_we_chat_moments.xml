@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_FFFFFF">
+
+
+    <com.crazyandcoder.tech.wechatmoments.widget.swipefresh.CustomSwipeRefreshLayout
+        android:id="@+id/swpie_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_FFFFFF">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base_FFFFFF">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/base_FFFFFF"
+                android:orientation="vertical"
+                tools:context="com.crazyandcoder.tech.wechatmoments.ui.WeChatMomentsActivity">
+
+                <include layout="@layout/item_title_bar_wechat_moment" />
+
+                <include layout="@layout/item_user_headview" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/base_FFFFFF" />
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.crazyandcoder.tech.wechatmoments.widget.swipefresh.CustomSwipeRefreshLayout>
+
+    <ch.ielse.view.imagewatcher.ImageWatcher
+        android:id="@+id/image_watcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>
